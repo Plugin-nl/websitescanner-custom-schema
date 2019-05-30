@@ -1,25 +1,24 @@
 === Websitescanner Custom Schema ===
 Contributors: timvaniersel
 Donate link: https://timvaniersel.com/en/
-Tags: schema, structured data, schema markup
+Tags: schema, structured data, schema markup, json-ld, rich snippets
 Requires at least: 3.0.1
 Tested up to: 5.2
-Stable tag: 4.3
+Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Adds a field to the editor for custom JSON-ld schema markup also known as structured data.
-The plugin also validates if the JSON is formated correctly.
-
-Add your own JSON-ld on every page, post and custom post without the `<script>` to show your own custom Schema.
+Adds custom field to the post & pages editor for custom JSON-ld schema markup also known as structured data. The plugin also validates if the JSON is formated correctly.
 
 == Description ==
 
-Adds a field to the editor for custom JSON-ld schema markup also known as structured data.
+Adds custom field to the post & pages editor for custom JSON-ld schema markup also known as structured data. The plugin also validates if the JSON is formated correctly. 
+
+Add your own JSON-ld on every page, post and custom post without the `<script>` to show your own custom Schema markup.
 
 Works well with the following plugins:
 
-1. [Remove Schema](https://wordpress.org/plugins/remove-schema/ "Remove Schema WordPress plugin")
+- [Remove Schema](https://wordpress.org/plugins/remove-schema/ "Remove Schema WordPress plugin")
 
 Usecases:
 
