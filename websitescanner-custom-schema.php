@@ -17,7 +17,7 @@
  * Plugin URI:        https://timvaniersel.com/en/plugins/websitescanner-custom-schema/
  * Description:       Adds a field to the editor for custom JSON-ld schema markup.
  * Version:           1.0.0
- * Author:            Tim van Iersel
+ * Author:            Tim van Iersel, Websitescanner
  * Author URI:        https://timvaniersel.com/en/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
