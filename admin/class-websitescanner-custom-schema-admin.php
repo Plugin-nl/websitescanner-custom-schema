@@ -137,13 +137,4 @@ class Websitescanner_Custom_Schema_Post_Editor {
 	    return $valid;
 	 }
 
-	 public function is_json_decode($string) {
-		 json_decode($string);
-		 return (json_last_error() == JSON_ERROR_NONE);
-		}
-
-		public function is_json_encode($string) {
-			json_decode($string);
-			return (json_last_error() == JSON_ERROR_UTF8);
-			}
 }
