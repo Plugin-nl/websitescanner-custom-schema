@@ -74,13 +74,14 @@ class Websitescanner_Custom_Schema_Post_Editor {
 	}
 
 	public function add_metabox(){
-		$screens = array( 'post', 'page' );
-		foreach ( $screens as $screen ) {
+		$post_types = get_post_types();
+
+		foreach ( $post_types as $post_type ) {
 				add_meta_box(
 						'websitescanner-custom-schema',
 						'Websitescanner Custom Schema',
 						array($this, 'display_post_editor_settings'),
-						$screen,
+						$post_type,
 						'advanced'
 				);
 		}
