@@ -65,19 +65,13 @@ class Websitescanner_Custom_Schema_Public {
 		if ($page_options) {
 
 			if (isset($page_options['custom_schema_0']) && $page_options['custom_schema_0'] != ""){
-				echo "<script type=\"application/ld+json\">
-				" . wp_unslash(json_decode($page_options['custom_schema_0']))  . "
-				</script>";
+				echo "<script type=\"application/ld+json\">" . wp_unslash(json_decode($page_options['custom_schema_0']))  . "</script>";
 			}
 			if (isset($page_options['custom_schema_1']) && $page_options['custom_schema_1'] != ""){
-				echo "<script type=\"application/ld+json\">
-				" . wp_unslash(json_decode($page_options['custom_schema_1']))  . "
-				</script>";
+				echo "<script type=\"application/ld+json\">" . wp_unslash(json_decode($page_options['custom_schema_1']))  . "</script>";
 			}
 			if (isset($page_options['custom_schema_2']) && $page_options['custom_schema_2'] != ""){
-				echo "<script type=\"application/ld+json\">
-				" . wp_unslash(json_decode($page_options['custom_schema_2']))  . "
-				</script>";
+				echo "<script type=\"application/ld+json\">" . wp_unslash(json_decode($page_options['custom_schema_2']))  . "</script>";
 			}
 		}
 	}
