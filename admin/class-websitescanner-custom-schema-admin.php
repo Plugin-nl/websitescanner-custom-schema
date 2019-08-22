@@ -74,13 +74,14 @@ class Websitescanner_Custom_Schema_Post_Editor {
 	}
 
 	public function add_metabox(){
-		$screens = array( 'post', 'page' );
-		foreach ( $screens as $screen ) {
+		$post_types = get_post_types();
+
+		foreach ( $post_types as $post_type ) {
 				add_meta_box(
 						'websitescanner-custom-schema',
 						'Websitescanner Custom Schema',
 						array($this, 'display_post_editor_settings'),
-						$screen,
+						$post_type,
 						'advanced'
 				);
 		}
@@ -94,7 +95,6 @@ class Websitescanner_Custom_Schema_Post_Editor {
 	public function options_update() {
 			if (isset($_POST[$this->plugin_name])){
 				$data = $this->validate($_POST[$this->plugin_name]);
-				//var_dump($data);
 				if ($data) {
 					update_post_meta( get_the_ID(), 'websitescanner_custom_schema_post_data', $data );
 				}
@@ -102,7 +102,6 @@ class Websitescanner_Custom_Schema_Post_Editor {
 
 	 }
 	public function validate($input) {
-		//var_dump($input);
 			// check if this isnt an auto save
 			if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
 					return;
@@ -111,7 +110,6 @@ class Websitescanner_Custom_Schema_Post_Editor {
 					return;
 
 	    $valid = array();
-	    //Cleanup
 			//does it exist?
 			if(isset($input['custom_schema_0'])){
 				//is it not empty  and is it truly JSON?
