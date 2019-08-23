@@ -9,14 +9,14 @@
  * that starts the plugin.
  *
  * @link              https://timvaniersel.com/en/
- * @since             1.0.0
+ * @since             1.1.0
  * @package           Websitescanner_Custom_Schema
  *
  * @wordpress-plugin
  * Plugin Name:       Websitescanner Custom Schema
  * Plugin URI:        https://timvaniersel.com/en/plugins/websitescanner-custom-schema/
  * Description:       Adds a field to the editor for custom JSON-ld schema markup.
- * Version:           1.0.0
+ * Version:           1.1.0
  * Author:            Tim van Iersel, Websitescanner
  * Author URI:        https://timvaniersel.com/en/
  * License:           GPL-2.0+
@@ -35,7 +35,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'WEBSITESCANNER_CUSTOM_SCHEMA_VERSION', '1.0.0' );
+define( 'WEBSITESCANNER_CUSTOM_SCHEMA_VERSION', '1.1.0' );
 
 /**
  * The code that runs during plugin activation.
