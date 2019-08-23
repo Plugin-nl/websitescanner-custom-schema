@@ -114,21 +114,21 @@ class Websitescanner_Custom_Schema_Post_Editor {
 			if(isset($input['custom_schema_0'])){
 				//is it not empty  and is it truly JSON?
 				if (!empty($input['custom_schema_0'])) {
-					$valid['custom_schema_0'] = wp_slash(json_encode($input['custom_schema_0']));
+					$valid['custom_schema_0'] = wp_slash(json_encode(preg_replace('/\s+/S', " ", $input['custom_schema_0'])));
 				}else{
 					$valid['custom_schema_0'] = "";
 				}
 			}
 			if(isset($input['custom_schema_1'])){
 				if (!empty($input['custom_schema_1'])) {
-					$valid['custom_schema_1'] = wp_slash(json_encode($input['custom_schema_1']));
+					$valid['custom_schema_1'] = wp_slash(json_encode(preg_replace('/\s+/S', " ", $input['custom_schema_1'])));
 				}else{
 					$valid['custom_schema_1'] = "";
 				}
 			}
 			if(isset($input['custom_schema_2'])){
 				if (!empty($input['custom_schema_2'])) {
-					$valid['custom_schema_2'] = wp_slash(json_encode($input['custom_schema_2']));
+					$valid['custom_schema_2'] = wp_slash(json_encode(preg_replace('/\s+/S', " ", $input['custom_schema_2'])));
 				}else{
 					$valid['custom_schema_2'] = "";
 				}
