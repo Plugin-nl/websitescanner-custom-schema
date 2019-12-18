@@ -54,6 +54,8 @@ function prettyPrint( $json )
 
                 case '{': case '[':
                     $level++;
+                    break;
+
                 case ',':
                     $ends_line_level = $level;
                     break;
@@ -67,6 +69,9 @@ function prettyPrint( $json )
                     $ends_line_level = $new_line_level;
                     $new_line_level = NULL;
                     break;
+                default:
+                    break;
+
             }
         } else if ( $char === '\\' ) {
             $in_escape = true;
