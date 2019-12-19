@@ -19,11 +19,11 @@ if (empty($options)) {
   $options['custom_schema_1'] = false;
   $options['custom_schema_2'] = false;
 }
-foreach ($options as $key => $option) {
+
   $custom_schema_0 = $options['custom_schema_0'];
   $custom_schema_1 = $options['custom_schema_1'];
   $custom_schema_2 = $options['custom_schema_2'];
-}
+
 
 function prettyPrint( $json )
 {
