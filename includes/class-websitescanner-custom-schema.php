@@ -163,6 +163,8 @@ class Websitescanner_Custom_Schema {
 
 		// actions
 		$this->loader->add_action( 'wp_head', $plugin_public, 'get_page_json_ld' );
+		$this->loader->add_action( 'amp_post_template_head', $plugin_public, 'get_page_json_ld' );
+
 	}
 
 	/**
