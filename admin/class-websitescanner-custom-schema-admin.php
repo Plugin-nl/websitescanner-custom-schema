@@ -137,4 +137,29 @@ class Websitescanner_Custom_Schema_Post_Editor {
 	    return $valid;
 	 }
 
+	public function websitescanner_custom_schema_modify_post_table( $column ) {
+		if (current_user_can('manage_options')){
+	    $column['websitescanner_custom_schema'] = 'Custom Schema';
+		}
+		return $column;
+	}
+
+	public function websitescanner_custom_schema_modify_post_table_row($column_name ) {
+	    switch ($column_name) {
+	        case 'websitescanner_custom_schema' :
+						$post = get_post();
+						$post_id = $post->ID;
+							$page_options = get_post_meta($post_id, 'websitescanner_custom_schema_post_data', true);
+							if ($page_options) {
+								if($page_options['custom_schema_0']) {
+								echo '<div aria-hidden="true" title="' . __('Custom Schema is placed on this page') . '" class="websitescanner-custom-schema-icon is-schema"></div>';
+							}else{
+								echo '<div aria-hidden="true" title="' . __('Custom Schema is placed on this page') . '" class="websitescanner-custom-schema-icon"></div>';
+							}
+						}
+	        default:
+	    }
+	    return "";
+	}
+
 }
