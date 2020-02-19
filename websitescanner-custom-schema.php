@@ -8,17 +8,17 @@
  * registers the activation and deactivation functions, and defines a function
  * that starts the plugin.
  *
- * @link              https://timvaniersel.com/en/
- * @since             1.1.0
+ * @link              https://plugin.nl/en/
+ * @since             1.0.0
  * @package           Websitescanner_Custom_Schema
  *
  * @wordpress-plugin
  * Plugin Name:       Websitescanner Custom Schema
- * Plugin URI:        https://timvaniersel.com/en/plugins/websitescanner-custom-schema/
+ * Plugin URI:        https://plugin.nl/en/websitescanner-custom-schema-plugin/
  * Description:       Adds a field to the editor for custom JSON-ld schema markup.
- * Version:           1.1.0
- * Author:            Tim van Iersel, Websitescanner
- * Author URI:        https://timvaniersel.com/en/
+ * Version:           1.3.1
+ * Author:            Plugin.nl
+ * Author URI:        https://plugin.nl/en/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       websitescanner-custom-schema
@@ -35,28 +35,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'WEBSITESCANNER_CUSTOM_SCHEMA_VERSION', '1.1.0' );
-
-/**
- * The code that runs during plugin activation.
- * This action is documented in includes/class-websitescanner-custom-schema-activator.php
- */
-function activate_websitescanner_custom_schema() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-websitescanner-custom-schema-activator.php';
-	Websitescanner_Custom_Schema_Activator::activate();
-}
-
-/**
- * The code that runs during plugin deactivation.
- * This action is documented in includes/class-websitescanner-custom-schema-deactivator.php
- */
-function deactivate_websitescanner_custom_schema() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-websitescanner-custom-schema-deactivator.php';
-	Websitescanner_Custom_Schema_Deactivator::deactivate();
-}
-
-register_activation_hook( __FILE__, 'activate_websitescanner_custom_schema' );
-register_deactivation_hook( __FILE__, 'deactivate_websitescanner_custom_schema' );
+define( 'WEBSITESCANNER_CUSTOM_SCHEMA_VERSION', '1.3.1' );
 
 /**
  * The core plugin class that is used to define internationalization,
