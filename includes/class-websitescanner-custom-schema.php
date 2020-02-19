@@ -6,7 +6,7 @@
  * A class definition that includes attributes and functions used across both the
  * public-facing side of the site and the admin area.
  *
- * @link       https://timvaniersel.com/en/
+ * @link       https://plugin.nl/en/
  * @since      1.0.0
  *
  * @package    Websitescanner_Custom_Schema
@@ -25,7 +25,7 @@
  * @since      1.0.0
  * @package    Websitescanner_Custom_Schema
  * @subpackage Websitescanner_Custom_Schema/includes
- * @author     Tim van Iersel <tim@websitescanner.io>
+ * @author     Tim van Iersel <tim@plugin.nl>
  */
 class Websitescanner_Custom_Schema {
 

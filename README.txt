@@ -1,9 +1,9 @@
 === Websitescanner Custom Schema ===
 Contributors: timvaniersel
-Donate link: https://timvaniersel.com/en/
+Donate link: https://plugin.nl/en/
 Tags: schema, structured data, schema markup, json-ld, rich snippets
 Requires at least: 3.0.1
-Tested up to: 5.2
+Tested up to: 5.3
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -13,7 +13,7 @@ Adds custom field to the post & pages editor for custom JSON-ld schema markup al
 
 == Description ==
 
-Adds custom field to the post & pages editor for custom JSON-ld schema markup also known as structured data. The plugin also validates if the JSON is formated correctly. 
+Adds custom field to the post & pages editor for custom JSON-ld schema markup also known as structured data. The plugin also validates if the JSON is formated correctly.
 
 Add your own JSON-ld on every page, post and custom post without the `<script>` to show your own custom Schema markup.
 

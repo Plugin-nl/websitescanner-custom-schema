@@ -3,7 +3,7 @@
 /**
  * Provide a editor area view for the plugin
  * *
- * @link       https://timvaniersel.com/en/
+ * @link       https://plugin.nl/en/
  * @since      1.0.0
  *
  * @package    Websitescanner_Custom_Schema
