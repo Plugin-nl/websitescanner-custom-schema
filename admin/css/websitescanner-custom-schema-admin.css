@@ -23,6 +23,9 @@ vertical-align:top;
 .websitescanner-custom-schema-icon.is-schema{
   background-color: #7ad03a;
 }
-.column-websitescanner_custom_schema{
+.column-websitescanner_custom_schema_column{
   text-align:center;
+}
+.column-websitescanner_custom_schema_column{
+  width:110px;
 }
