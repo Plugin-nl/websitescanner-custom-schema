@@ -151,6 +151,7 @@ class Websitescanner_Custom_Schema {
 
 		$this->loader->add_filter( 'manage_pages_columns', $plugin_post_editor, 'websitescanner_custom_schema_modify_post_table' );
 		$this->loader->add_action( 'manage_pages_custom_column', $plugin_post_editor, 'websitescanner_custom_schema_modify_post_table_row' );
+
 		$this->loader->add_filter( 'manage_posts_columns', $plugin_post_editor, 'websitescanner_custom_schema_modify_post_table' );
 		$this->loader->add_action( 'manage_posts_custom_column', $plugin_post_editor, 'websitescanner_custom_schema_modify_post_table_row' );
 	}
