@@ -94,7 +94,8 @@ class Websitescanner_Custom_Schema_Post_Editor {
 
 	public function options_update() {
 			if (isset($_POST[$this->plugin_name])){
-				$data = $this->validate($_POST[$this->plugin_name]);
+				$data = sanitize_post($_POST[$this->plugin_name], 'js');
+				$data = $this->validate($data);
 				if ($data) {
 					update_post_meta( get_the_ID(), 'websitescanner_custom_schema_post_data', $data );
 				}
