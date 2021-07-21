@@ -107,7 +107,7 @@ class Websitescanner_Custom_Schema_Post_Editor {
 			if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
 					return;
 			// security check
-			if ( isset($_POST['websitescanner_custom_schema_nonce'])  || !wp_verify_nonce( $_POST['websitescanner_custom_schema_nonce'], plugin_basename( __FILE__ ) ) )
+			if ( !isset($_POST['websitescanner_custom_schema_nonce']) || !wp_verify_nonce( $_POST['websitescanner_custom_schema_nonce'], plugin_basename( __FILE__ ) ) )
 					return;
 
 	    $valid = array();
