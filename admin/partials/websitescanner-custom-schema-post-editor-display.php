@@ -20,10 +20,9 @@ if (empty($options)) {
   $options['custom_schema_2'] = false;
 }
 
-  $custom_schema_0 = $options['custom_schema_0'];
-  $custom_schema_1 = $options['custom_schema_1'];
-  $custom_schema_2 = $options['custom_schema_2'];
-
+$custom_schema_0 = $options['custom_schema_0'];
+$custom_schema_1 = $options['custom_schema_1'];
+$custom_schema_2 = $options['custom_schema_2'];
 
 function prettyPrint( $json )
 {
@@ -95,7 +94,7 @@ function prettyPrint( $json )
   <?php esc_attr_e( '(Your page/post has to be published for this) ', $this->plugin_name ); ?>.
 </p><br>
 
-<textarea name="<?php echo $this->plugin_name; ?>[custom_schema_0]" data-id="0" id="webs-custom-schema-0" class="webs-custom-schema widefat" cols="50" rows="5"><?php if (isset($custom_schema_0)){ echo prettyPrint(wp_unslash(json_decode($custom_schema_0)));} ?></textarea>
+<textarea name="<?php echo esc_attr($this->plugin_name); ?>[custom_schema_0]" data-id="0" id="webs-custom-schema-0" class="webs-custom-schema widefat" cols="50" rows="5"><?php if (isset($custom_schema_0)){ echo prettyPrint(wp_unslash(json_decode($custom_schema_0)));} ?></textarea>
 <label for="webs-custom-schema-0" class="webs-custom-schema-error" id="webs-custom-schema-errors-0" class=""><?php esc_attr_e('Unchanged', $this->plugin_name); ?></label></br><br>
 
 <?php if(!$custom_schema_1 && !$custom_schema_2){ ?>
@@ -104,11 +103,11 @@ function prettyPrint( $json )
 </div>
 <?php } ?>
 <span class="webs-schema-1 <?php if(!$custom_schema_1 && !$custom_schema_2){echo "hidden";}?>">
-<textarea name="<?php echo $this->plugin_name; ?>[custom_schema_1]" data-id="1" id="webs-custom-schema-1" class="webs-custom-schema widefat" cols="50" rows="5"><?php if (isset($custom_schema_1)){echo prettyPrint(wp_unslash(json_decode($custom_schema_1)));} ?></textarea>
+<textarea name="<?php echo esc_attr($this->plugin_name); ?>[custom_schema_1]" data-id="1" id="webs-custom-schema-1" class="webs-custom-schema widefat" cols="50" rows="5"><?php if (isset($custom_schema_1)){echo prettyPrint(wp_unslash(json_decode($custom_schema_1)));} ?></textarea>
 <span class="webs-custom-schema-error" id="webs-custom-schema-errors-1" class=""><?php esc_attr_e('Unchanged', $this->plugin_name); ?></span></br><br>
 </span>
 <span class="webs-schema-2 <?php if(!$custom_schema_1 && !$custom_schema_2){echo "hidden";}?>">
-<textarea name="<?php echo $this->plugin_name; ?>[custom_schema_2]" data-id="2" id="webs-custom-schema-2" class="webs-custom-schema widefat" cols="50" rows="5"><?php if (isset($custom_schema_2)){echo prettyPrint(wp_unslash(json_decode($custom_schema_2)));} ?></textarea>
+<textarea name="<?php echo esc_attr($this->plugin_name); ?>[custom_schema_2]" data-id="2" id="webs-custom-schema-2" class="webs-custom-schema widefat" cols="50" rows="5"><?php if (isset($custom_schema_2)){echo prettyPrint(wp_unslash(json_decode($custom_schema_2)));} ?></textarea>
 <span class="webs-custom-schema-error" id="webs-custom-schema-errors-2" class=""><?php esc_attr_e('Unchanged', $this->plugin_name); ?></span></br><br>
 </span>
 <span class="webs-more-link hidden">

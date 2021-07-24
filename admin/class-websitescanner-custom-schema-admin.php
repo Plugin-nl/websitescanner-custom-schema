@@ -94,8 +94,7 @@ class Websitescanner_Custom_Schema_Post_Editor {
 
 	public function options_update() {
 			if (isset($_POST[$this->plugin_name])){
-				$data = sanitize_post($_POST[$this->plugin_name], 'js');
-				$data = $this->validate($data);
+				$data = $this->validate($_POST[$this->plugin_name]);
 				if ($data) {
 					update_post_meta( get_the_ID(), 'websitescanner_custom_schema_post_data', $data );
 				}
@@ -111,6 +110,7 @@ class Websitescanner_Custom_Schema_Post_Editor {
 					return;
 
 	    $valid = array();
+			error_log("nonce isset");
 			//does it exist?
 			if(isset($input['custom_schema_0'])){
 				//is it not empty  and is it truly JSON?
@@ -138,32 +138,31 @@ class Websitescanner_Custom_Schema_Post_Editor {
 	    return $valid;
 	 }
 
-	public function websitescanner_custom_schema_modify_post_table( $columns ) {
-		if (current_user_can('manage_options')){
-	    $columns['websitescanner_custom_schema_column'] = 'Custom Schema';
-		}
-		return $columns;
-	}
+	 	public function websitescanner_custom_schema_modify_post_table( $columns ) {
+	 		if (current_user_can('manage_options')){
+	 	    $columns['websitescanner_custom_schema_column'] = 'Custom Schema';
+	 		}
+	 		return $columns;
+	 	}
 
-	public function websitescanner_custom_schema_modify_post_table_row($column_name ) {
+	 	public function websitescanner_custom_schema_modify_post_table_row($column_name ) {
 
-	    switch ($column_name) {
-	        case 'websitescanner_custom_schema_column' :
-						$post = get_post();
-						$post_id = $post->ID;
-						$page_options = get_post_meta($post_id, 'websitescanner_custom_schema_post_data', true);
-						if (isset($page_options)) {
-							if((isset($page_options['custom_schema_0'])) && ($page_options['custom_schema_0'] != "")) {
-								echo '<div aria-hidden="true" title="' . __('Custom Schema is placed on this page') . '" class="websitescanner-custom-schema-icon is-schema"></div>';
-							}else{
-								echo '<div aria-hidden="true" title="' . __('No Custom Schema is placed on this page') . '" class="websitescanner-custom-schema-icon"></div>';
-							}
-						}else{
-							echo '<div aria-hidden="true" title="' . __('No Custom Schema is placed on this page') . '" class="websitescanner-custom-schema-icon"></div>';
-						}
-	        default:
-	    }
-	    return "";
-	}
-
+	 	    switch ($column_name) {
+	 	        case 'websitescanner_custom_schema_column' :
+	 						$post = get_post();
+	 						$post_id = $post->ID;
+	 						$page_options = get_post_meta($post_id, 'websitescanner_custom_schema_post_data', true);
+	 						if (isset($page_options)) {
+	 							if((isset($page_options['custom_schema_0'])) && ($page_options['custom_schema_0'] != "")) {
+	 								echo '<div aria-hidden="true" title="' . __('Custom Schema is placed on this page') . '" class="websitescanner-custom-schema-icon is-schema"></div>';
+	 							}else{
+	 								echo '<div aria-hidden="true" title="' . __('No Custom Schema is placed on this page') . '" class="websitescanner-custom-schema-icon"></div>';
+	 							}
+	 						}else{
+	 							echo '<div aria-hidden="true" title="' . __('No Custom Schema is placed on this page') . '" class="websitescanner-custom-schema-icon"></div>';
+	 						}
+	 	        default:
+	 	    }
+	 	    return "";
+	 	}
 }

@@ -16,7 +16,7 @@
  * Plugin Name:       Websitescanner Custom Schema
  * Plugin URI:        https://plugin.nl/en/websitescanner-custom-schema-plugin/
  * Description:       Adds a field to the editor for custom JSON-ld schema markup.
- * Version:           1.3.5
+ * Version:           1.3.7
  * Author:            Plugin.nl
  * Author URI:        https://plugin.nl/en/
  * License:           GPL-2.0+
@@ -35,8 +35,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'WEBSITESCANNER_CUSTOM_SCHEMA_VERSION', '1.3.5' );
-
+define( 'WEBSITESCANNER_CUSTOM_SCHEMA_VERSION', '1.3.7' );
 /**
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.

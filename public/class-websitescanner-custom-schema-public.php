@@ -56,23 +56,24 @@ class Websitescanner_Custom_Schema_Public {
 
 	public function get_page_json_ld(){
 		// Get post id
-		$post_ID = url_to_postid((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]");
+		$post_ID = get_queried_object_id();
 
 		// get page options
 		$page_options = get_post_meta($post_ID, 'websitescanner_custom_schema_post_data', true);
 
 		//if page options...
 		if ($page_options) {
-
+			$html = '';
 			if (isset($page_options['custom_schema_0']) && $page_options['custom_schema_0'] != ""){
-				echo "<script type=\"application/ld+json\">" . wp_unslash(json_decode($page_options['custom_schema_0']))  . "</script>";
+				$html .=  "<script type=application/ld+json>" . wp_unslash(json_decode($page_options['custom_schema_0'])) . "</script>";
 			}
 			if (isset($page_options['custom_schema_1']) && $page_options['custom_schema_1'] != ""){
-				echo "<script type=\"application/ld+json\">" . wp_unslash(json_decode($page_options['custom_schema_1']))  . "</script>";
+				$html .=  "<script type=\"application/ld+json\">" . wp_unslash(json_decode($page_options['custom_schema_1']))  . "</script>";
 			}
 			if (isset($page_options['custom_schema_2']) && $page_options['custom_schema_2'] != ""){
-				echo "<script type=\"application/ld+json\">" . wp_unslash(json_decode($page_options['custom_schema_2']))  . "</script>";
+				$html .=  "<script type=\"application/ld+json\">" . wp_unslash(json_decode($page_options['custom_schema_2']))  . "</script>";
 			}
+			echo $html;
 		}
 	}
 
